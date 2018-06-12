@@ -1,2 +1,19 @@
 <h1>Boats#show</h1>
 <p>Find me in app/views/boats/show.html.erb</p>
+
+<div class="wrapper">
+<%= link_to boats_path do %>
+    <button type="button" class="back btn btn-outline-light">Back</button>
+  <% end %>
+
+  <div class="container">
+    <div class="boat">
+        <h1 class="title"><%= @boat.name %></h1>
+        <p><%= @boat.price %></p>
+        <div class="boat_img" style="background-image: url(<%= image_path("boat.jpg")%>;"></div>
+        <p><%= @boat.location %></p>
+        <p><%= @boat.capacity %></p>
+        <p><%= @boat.boat_type %></p>
+    </div>
+  </div>
+</div>
