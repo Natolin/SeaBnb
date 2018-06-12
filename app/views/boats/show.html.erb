@@ -15,5 +15,10 @@
         <p><%= @boat.capacity %></p>
         <p><%= @boat.boat_type %></p>
     </div>
+    <div class="delete_boat">
+      <%= link_to boat_path(@boat), :method => "delete" do %>
+      <button type="button" class="btn btn-outline-light">Delete boat</button>
+      <% end %>
+    </div>
   </div>
 </div>
