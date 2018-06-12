@@ -11,8 +11,14 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+.navbar-logo {
   height: 50px;
+  background-position: center;
+  background-size: cover !important;
+  img {
+    height: 50px;
+  }
+
 }
 
 /* User Avatar */

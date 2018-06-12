@@ -12,4 +12,18 @@
 
 Boat.create(name: 'Super_Dan', location: 'barcelona', capacity: 4, price: 100, boat_type: 'yacht', user_id: 1, photo: "ftvx56r6ysn8jt86huc3")
 
-Boat.create(name: 'Dan', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+Boat.create(name: 'Nat', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Super Nat', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Chris', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Super Chris', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Syd', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Super Syd', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Jess', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Super Jess', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)

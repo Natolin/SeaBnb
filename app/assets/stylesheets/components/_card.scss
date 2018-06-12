@@ -2,4 +2,73 @@
   height: 200px;
   background-position: center;
   background-size: cover !important;
+  border-radius: 5px 5px 0px 0px;
+  position: relative;
+}
+
+
+.boat_details{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: #B8A7A7;
+  padding-bottom: 0px;
+  p{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+}
+
+.main{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  color: #B8A7A7;
+  padding-bottom: 0px;
+}
+
+.details{
+  p{
+    font-size: 12px;
+  }
+}
+
+
+.card_border{
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.nav_wheel{
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover !important;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+
+.location{
+  background-color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 60%;
+  text-align: center;
+  color: #B8A7A7;
+  position: relative;
+  left: 20%;
+  top: -15px;
+  border-radius: 5px;
+  h3{
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }
