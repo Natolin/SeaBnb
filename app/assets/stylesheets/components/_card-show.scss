@@ -1,0 +1,51 @@
+.title p, h1 {
+  display: inline-block;
+  padding: 5px;
+  color: #B0B0B0
+}
+
+
+#vessel-name {
+  font-size: 50px;
+}
+
+#locale {
+  font-size: 30px;
+}
+
+.card-show {
+  background: white;
+  border-radius: 10px 10px 0px 0px;
+
+
+  .show-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  p, h3 {
+    padding: 20px;
+  }
+}
+
+
+.show-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.book-now-button {
+  font-size: 28px;
+  margin-top: 50px;
+  display: flex;
+  color: white;
+  width: 350px;
+  height: 60px;
+  background: #D0A143;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}

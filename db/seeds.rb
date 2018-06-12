@@ -10,7 +10,7 @@
 
  User.create(user_name: 'Piotr', password: 'password', password_confirmation: 'password', email: 'p@p.p')
 
-Boat.create(name: 'Super_Dan', location: 'barcelona', capacity: 4, price: 100, boat_type: 'yacht', user_id: 1)
+Boat.create(name: 'Super_Dan', location: 'barcelona', capacity: 4, price: 100, boat_type: 'yacht', user_id: 1, photo: "ftvx56r6ysn8jt86huc3")
 
 Boat.create(name: 'Nat', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
 

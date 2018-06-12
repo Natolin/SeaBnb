@@ -1,26 +1,54 @@
-<h1>Boats#show</h1>
-<p>Find me in app/views/boats/show.html.erb</p>
+
 
 <div class="wrapper">
 <%= link_to boats_path do %>
     <button type="button" class="back btn btn-outline-light">Back</button>
   <% end %>
 
+
   <div class="container">
-    <div class="boat">
-        <h1 class="title"><%= @boat.name %></h1>
-        <p><%= @boat.price %></p>
-        <div class="boat_img" style="background-image: url(<%= image_path("boat.jpg")%>;"></div>
-        <p><%= @boat.location %></p>
-        <p><%= @boat.capacity %></p>
-        <p><%= @boat.boat_type %></p>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <span class="title">
+          <h1 id="vessel-name"><%= @boat.name %> </h1>
+          <p id="locale">out of <%= @boat.location %></p>
+        </span>
+      </div>
     </div>
-    <div class="delete_boat">
-      <%= link_to boat_path(@boat), :method => "delete" do %>
-      <button type="button" class="btn btn-outline-light">Delete boat</button>
-      <% end %>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="card-show">
+          <%= cl_image_tag @boat.photo, class: "show-img" %>
+          <h3>Owner: <%= @boat.user.user_name %></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eveniet dolorem aliquam porro quidem dolorum, quod, odit ut rem consequuntur distinctio omnis perspiciatis animi inventore enim quos ipsum, sed deleniti debitis error facilis vel amet quaerat. Dolor, impedit labore consequatur consectetur quibusdam, fugiat voluptatum placeat perspiciatis corporis, dicta nemo sit.</p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <div class="show-info">
+          <h3><%= @boat.name%>'s Details:</h3>
+          <br>
+          <h4><strong>Price/day:</strong> $<%= @boat.price %></h4>
+          <h4><strong>Vessel Type:</strong> <%= @boat.boat_type %></h4>
+          <h4><strong>Vessel Capacity:</strong>  <%= @boat.capacity %></h4>
+
+          <div class="book-now-button">
+            <h2>BOOK NOW</h2>
+          </div>
+        </div>
+
+
+      </div>
+
+
     </div>
   </div>
 </div>
 
-<%= cl_image_tag @boat.photo, width: 400%>
+<div class="delete_boat">
+  <%= link_to boat_path(@boat), :method => "delete" do %>
+  <button type="button" class="btn btn-outline-light">Delete boat</button>
+  <% end %>
+</div>
+
