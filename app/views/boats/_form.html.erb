@@ -1,0 +1,22 @@
+<%= form_for @boat do |f| %>
+
+Name of Vessel: <%= f.text_field :name %>
+
+Home Port: <%= f.text_field :location %> <!-- use google maps to confirm -->
+
+Choose type of vessel: <%= f.text_field :boat_type %> <!-- make a drop down from list -->
+
+Choose capacity: <%= f.number_field :capacity %> <!-- make a drop down from list, max 15+ -->
+
+Price per day: <%= f.number_field :price %>
+
+Add description of your cool ass vessel: <%= f.text_area :description %>
+
+TEMP use user_id 1 or 2: <%= f.number_field :user_id %>
+
+<%= f.submit %>
+<% end %>
+
+
+
+
