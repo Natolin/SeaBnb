@@ -5,6 +5,7 @@
 }
 
 
+
 #vessel-name {
   font-size: 40px;
   text-position: center;
@@ -16,7 +17,7 @@
 
 .card-show {
   background: white;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 
 
   .show-img {
@@ -147,6 +148,30 @@
 
 .delete_boat{
   margin-top: 50px;
+  button{
+   width: 150px;
+   color: white;
+   background-color: #D0A143;
+   border-radius: 5px;
+   height: 40px;
+  }
+  button:hover{
+    background-color: #d9534f;
+  }
+}
+
+.edit_boat{
+  margin-top: 50px;
+  button{
+   width: 150px;
+   color: white;
+   background-color: #D0A143;
+   border-radius: 5px;
+   height: 40px;
+  }
+  button:hover{
+    background-color: #5cb85c;
+  }
 }
 
 .owner_options{
@@ -154,11 +179,4 @@
 border-top: 1px solid #D0A143;
 text-align: center;
 width: 60%;
- button{
-   width: 150px;
-   color: white;
-   background-color: #D0A143;
-   border-radius: 5px;
-   height: 40px;
-  }
 }
