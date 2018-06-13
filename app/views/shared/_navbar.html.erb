@@ -4,14 +4,19 @@
       <%= link_to root_path do %>
         <%= image_tag "nav_wheel.png"%>
       <% end %>
-    <p>SeaBnB</p>
+      <%= link_to root_path do %>
+          <p>SeaBnB</p>
+        <% end %>
     </div>
+
+
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <a href="/boats" class="navbar-wagon-item navbar-wagon-link">All Boats</a>
-    <a href="/" class="navbar-wagon-item navbar-wagon-link">My Bookings</a>
+   <!--  <a href="/" class="navbar-wagon-item navbar-wagon-link">Sign up</a> -->
+   <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
 
     <!-- Profile picture with dropdown list -->

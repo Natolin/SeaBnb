@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row">
       <span class="title">
-          <h3 id="vessel-name"><%= @boat.name %> </h3>
+          <h3 id="vessel-name"><%= @boat.name.capitalize %> </h3>
         </span>
     </div>
 
@@ -31,7 +31,7 @@
               <br>
               <div class="price">
                 <h5><strong>Price/day:</strong></h5>
-                <h5><%= @boat.price %> $</h5>
+                <h5><%= @boat.price %> €</h5>
               </div>
               <div class="vessel_type">
                 <h5><strong>Vessel Type:</strong></h5>
@@ -39,17 +39,17 @@
               </div>
               <div class="vessel_capacity">
                 <h5><strong>Vessel Capacity:</strong></h5>
-                <h5><%= @boat.capacity %></h5>
+                <h5><%= @boat.capacity %> passengers</h5>
               </div>
               <div class="city">
-                <h5><strong>City:</strong></h5>
-                <h5><%= @boat.location.capitalize  %></h5>
+                <h5><strong>Location:</strong></h5>
+                <h5><%= @boat.location.capitalize %></h5>
               </div>
             </div>
           </div>
           <div class="owner_options">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-             <div class="delete_boat">
+             <div class="edit_boat">
                 <%= link_to edit_boat_path(@boat) do %>
                   <button class="option_button">Edit</button>
                 <% end %>
@@ -57,8 +57,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
               <div class="delete_boat">
-                <%= link_to boat_path(@boat), :method => "delete" do %>
-                  <button class="option_button">Delete boat</button>
+                <%= link_to boat_path(@boat), :method => "delete",
+            data: { confirm: "Are you sure you want to delete #{@boat.name}?"} do %>
+                  <button class="option_button" >Delete boat</button>
                 <% end %>
               </div>
             </div>
@@ -72,6 +73,7 @@
 </div>
 
 <div class="space-maker" style="height:50px"></div>
+
 
 
 
