@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+
+.home-body {
+  background: white;
+}
+
 .banner {
   display: flex;
   justify-content: center;
@@ -13,6 +18,10 @@
     color: white;
     text-shadow: 1px 1px #BDBDBD;
   }
+}
+
+.search {
+
 }
 
 .featured-sign {
