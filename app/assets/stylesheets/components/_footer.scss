@@ -21,6 +21,14 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
+.footer-logo {
   color: #D23333;
+  height: 25px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover !important;
+  img {
+    height: 25px;
+  }
+
 }
