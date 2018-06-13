@@ -1,28 +1,24 @@
 <div class="container">
-  <div class="home-search">
+  <div class="search-home">
 
-    <%= form_for @boat do |f| %>
+    <form class="form-inline">
+      <div class="form-group">
+          <label class="sr-only" for="inputLocation">Location</label>
+          <input type="text" class="form-control" id="inputLocation" placeholder="Location">
+      </div>
 
-    <p>Name of Vessel: <%= f.text_field :name %></p>
+      <div class="form-group">
+          <label class="sr-only" for="inputPassword">Start Date</label>
+          <input type="date" class="form-control" id="inputDateStart" placeholder="Start Date">
+      </div>
 
-    <p>Home Port: <%= f.text_field :location %></p> <!-- use google maps to confirm -->
-    <p>Choose type of vessel: <%= f.select :boat_type, ['yacht', 'sloop', 'scooner', 'frigate', 'haunted pirate ship']%></p>
+      <div class="form-group">
+          <label class="sr-only" for="inputPassword">End Date</label>
+          <input type="date" class="form-control" id="inputDateEnd" placeholder="End Date">
+      </div>
 
-    <p>Choose vessel capacity: <%= f.select :capacity, ['2 people', '3 people', '4 people', '5 people']%></p>
-
-    <p>Price per day: <%= f.number_field :price %> euros</p>
-
-    <p>Add description of your cool ass vessel:</p>
-    <p> <%= f.text_area :description %></p>
-
-    <p>Upload a photo of your boat: <%= f.file_field :photo %></p>
-
-    <!-- TEMP --> <%= f.hidden_field( :user_id, { :value => 1 } ) %>
-
-
-    <%= f.submit %>
-    <% end %>
-
+      <button type="submit" class=" search-button btn">Get Cruisin'</button>
+    </form>
 
     </div>
 </div>
