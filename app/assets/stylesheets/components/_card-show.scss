@@ -148,3 +148,17 @@
 .delete_boat{
   margin-top: 50px;
 }
+
+.owner_options{
+
+border-top: 1px solid #D0A143;
+text-align: center;
+width: 60%;
+ button{
+   width: 150px;
+   color: white;
+   background-color: #D0A143;
+   border-radius: 5px;
+   height: 40px;
+  }
+}
