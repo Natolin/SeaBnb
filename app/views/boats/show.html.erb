@@ -2,44 +2,57 @@
 
 <div class="wrapper">
 <%= link_to boats_path do %>
-    <button type="button" class="back btn btn-outline-light">Back</button>
+    <button type="button" class="back btn btn-info">Back</button>
   <% end %>
 
 
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <span class="title">
-          <h1 id="vessel-name"><%= @boat.name %> </h1>
-          <p id="locale">out of <%= @boat.location %></p>
+      <span class="title">
+          <h3 id="vessel-name"><%= @boat.name %> </h3>
         </span>
-      </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="card-show">
-          <%= cl_image_tag @boat.photo, class: "show-img" %>
+          <div class="show-img" style="background-image: url(<%= @boat.photo %>;"></div>
+
           <h3>Owner: <%= @boat.user.user_name %></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eveniet dolorem aliquam porro quidem dolorum, quod, odit ut rem consequuntur distinctio omnis perspiciatis animi inventore enim quos ipsum, sed deleniti debitis error facilis vel amet quaerat. Dolor, impedit labore consequatur consectetur quibusdam, fugiat voluptatum placeat perspiciatis corporis, dicta nemo sit.</p>
         </div>
       </div>
 
       <div class="col-xs-12 col-md-6">
-        <div class="show-info">
-          <h3><%= @boat.name%>'s Details:</h3>
-          <br>
-          <h4><strong>Price/day:</strong> $<%= @boat.price %></h4>
-          <h4><strong>Vessel Type:</strong> <%= @boat.boat_type %></h4>
-          <h4><strong>Vessel Capacity:</strong>  <%= @boat.capacity %></h4>
-
-          <div class="book-now-button">
-            <h2>BOOK NOW</h2>
+        <div class="details">
+          <div class="show-info">
+            <div class="text">
+              <h3>Details</h3>
+              <br>
+              <div class="price">
+                <h5><strong>Price/day:</strong></h5>
+                <h5><%= @boat.price %> $</h5>
+              </div>
+              <div class="vessel_type">
+                <h5><strong>Vessel Type:</strong></h5>
+                <h5><%= @boat.boat_type.capitalize  %></h5>
+              </div>
+              <div class="vessel_capacity">
+                <h5><strong>Vessel Capacity:</strong></h5>
+                <h5><%= @boat.capacity %></h5>
+              </div>
+              <div class="city">
+                <h5><strong>City:</strong></h5>
+                <h5><%= @boat.location.capitalize  %></h5>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <button type="button" class="book_now btn btn-success">Book it now!</button>
           </div>
         </div>
 
 
-      </div>
 
 
     </div>
@@ -48,7 +61,7 @@
 
 <div class="delete_boat">
   <%= link_to boat_path(@boat), :method => "delete" do %>
-  <button type="button" class="btn btn-outline-light">Delete boat</button>
+  <button type="button" class=" delete btn btn-primary">Delete boat</button>
   <% end %>
 </div>
 
