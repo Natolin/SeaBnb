@@ -37,9 +37,33 @@
   height: 380px;
   //for Wed Demo only
   text-align: center;
+  //for Wed Demo only
 
   h3 {
     color: #CC9933;
     padding-top: 13%;
   }
+}
+
+.tutorial-description {
+  //for Wed Demo only
+  text-align: center;
+  margin-top: 18%;
+  //for Wed Demo only
+  p {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 40px;
+  }
+}
+
+.tutorial-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.space-maker {
+  height: 200px;
 }
