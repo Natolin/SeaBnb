@@ -1,4 +1,90 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+Home-Beatification
+<div class="wrapper">
+  <div class="banner">
+    <h1>Come on in, the water is fine.</h1>
+  </div>
+</div>
 
-<%= render 'search_main' %>
+<div class="wrapper">
+  <div class="featured-sign">
+    <div class="sign">
+      <h2>Featured Vessels</h2>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper">
+  <div class="featured-vessels">
+    <h3>Your Featured Vessels Here!</h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="featured-sign">
+    <div class="sign">
+      <h2>How It Works</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="tutorial-steps">
+        <div class="tutorial-description">
+          <h3><strong>1 </strong>Choose your destination</h3>
+          <br>
+          <p>Enter your cruise location and desired dates of travel to reveal your matches.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="tutorial-steps">
+        <%= image_tag("pic2.jpg", class: 'tutorial-image') %>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-maker"></div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="tutorial-steps">
+        <%= image_tag("home-boat-2.jpg", class: 'tutorial-image') %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="tutorial-steps">
+        <div class="tutorial-description">
+          <h3><strong id="number-of-step">2 </strong>Select your ideal vessel</h3>
+          <br>
+          <p>From yachts to schooners, solo expeditions to bachelor parties - your choices are only limited by your imagination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-maker"></div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="tutorial-steps">
+        <div class="tutorial-description">
+          <h3><strong>3 </strong>The sea awaits</h3>
+          <br>
+          <p>Confirm your booking with the owner and set sail!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="tutorial-steps">
+        <%= image_tag("pic3.png", class: 'tutorial-image') %>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-maker"></div>
+
+</div>
