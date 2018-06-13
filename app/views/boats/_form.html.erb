@@ -1,24 +1,28 @@
-<%= form_for @boat do |f| %>
+<div class="container">
+  <div class="boat-form">
 
-Name of Vessel: <%= f.text_field :name %>
+    <%= form_for @boat do |f| %>
 
-Home Port: <%= f.text_field :location %> <!-- use google maps to confirm -->
+    <p>Name of Vessel: <%= f.text_field :name %></p>
 
-Choose type of vessel: <%= f.text_field :boat_type %> <!-- make a drop down from list -->
+    <p>Home Port: <%= f.text_field :location %></p> <!-- use google maps to confirm -->
+    <p>Choose type of vessel: <%= f.select :boat_type, ['yacht', 'sloop', 'scooner', 'frigate', 'haunted pirate ship']%></p>
 
-Choose capacity: <%= f.number_field :capacity %> <!-- make a drop down from list, max 15+ -->
+    <p>Choose vessel capacity: <%= f.select :capacity, ['2 people', '3 people', '4 people', '5 people']%></p>
 
-Price per day: <%= f.number_field :price %>
+    <p>Price per day: <%= f.number_field :price %> euros</p>
 
-Add description of your cool ass vessel: <%= f.text_area :description %>
+    <p>Add description of your cool ass vessel:</p>
+    <p> <%= f.text_area :description %></p>
 
-Upload a photo of your boat: <%= f.file_field :photo %>
+    <p>Upload a photo of your boat: <%= f.file_field :photo %></p>
 
-TEMP use user_id 1 or 2: <%= f.number_field :user_id %>
-
-<%= f.submit %>
-<% end %>
-
-
+    <!-- TEMP --> <%= f.hidden_field( :user_id, { :value => 1 } ) %>
 
 
+    <%= f.submit %>
+    <% end %>
+
+
+    </div>
+</div>

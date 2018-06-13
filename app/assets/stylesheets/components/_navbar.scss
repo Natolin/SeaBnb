@@ -9,16 +9,24 @@
   align-items: center;
   justify-content: space-between;
 }
-
 /* Logo */
 .navbar-logo {
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
   background-position: center;
   background-size: cover !important;
   img {
-    height: 50px;
+    height: 40px;
   }
 
+}
+
+.navbar-logo p {
+  margin-left: 15px;
+  margin-top: 6px;
+  color: #616668;
+  font-size: 20px;
 }
 
 /* User Avatar */
@@ -47,7 +55,7 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #B8A7A9;
   text-decoration: none;
 }
 
