@@ -58,6 +58,23 @@
 }
 
 
+.owner_options{
+  // display: flex;
+  // justify-content: space-between;
+  border-top: 1px solid #D0A143;
+  text-align: center;
+  width: 60%;
+  button{
+    width: 150px;
+    color: white;
+    background-color: #D0A143;
+    border-radius: 5px;
+    height: 40px;
+  }
+
+
+}
+
 .price{
   display: flex;
   justify-content: space-between;
@@ -93,6 +110,8 @@
   background-color: white;
   border-radius: 5px;
   padding-bottom: 20px;
+
+
 
 }
 

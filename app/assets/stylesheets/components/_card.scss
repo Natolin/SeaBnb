@@ -39,8 +39,13 @@
 
 
 .card_border{
+  width: 270px;
+  margin: 10px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  padding: 0px;
+  box-shadow: 0px 0px 4px #D3D3D3;
+  border-radius: 5px 5px 0px 0px;
+
 
 }
 
@@ -66,6 +71,7 @@
   left: 20%;
   top: -15px;
   border-radius: 5px;
+  box-shadow: 0px 0px 2px #D3D3D3;
   h3{
     font-size: 20px;
     margin-top: 4px;

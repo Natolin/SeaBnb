@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+
+.home-body {
+  background: white;
+}
+
 .banner {
   display: flex;
   justify-content: center;
@@ -8,11 +13,16 @@
   background-size: 100% 600px;
 
   h1 {
-    margin-top: 10%;
     font-size: 72px;
     color: white;
     text-shadow: 1px 1px #BDBDBD;
+    padding-bottom: 60px;
   }
+}
+
+.search {
+  margin-top: 14%;
+  text-align: center;
 }
 
 .featured-sign {
