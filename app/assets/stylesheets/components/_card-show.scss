@@ -30,12 +30,14 @@
   p {
     padding: 20px;
     margin-top: 0px;
+    border-bottom: 1px solid #D0A143;
 
   }
 
   h3 {
     padding: 20px;
     margin-bottom: 0px;
+    border-bottom: 1px solid #D0A143;
 
   }
 }
@@ -59,7 +61,7 @@
 .price{
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid black;
+  border-top: 1px solid #D0A143;
   padding-top: 10px;
 }
 
@@ -118,11 +120,26 @@
   text-position: center;
 }
 
-.back, .delete{
+.back {
   background-color: #D0A143;
   border: 1px solid #D0A143;
+  color:white;
 }
 
 .delete_boat{
   margin-top: 50px;
+}
+
+.owner_options{
+
+border-top: 1px solid #D0A143;
+text-align: center;
+width: 60%;
+ button{
+   width: 150px;
+   color: white;
+   background-color: #D0A143;
+   border-radius: 5px;
+   height: 40px;
+  }
 }

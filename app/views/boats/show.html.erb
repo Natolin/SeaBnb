@@ -19,7 +19,7 @@
           <div class="show-img" style="background-image: url(<%= @boat.photo %>;"></div>
 
           <h3>Owner: <%= @boat.user.user_name %></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eveniet dolorem aliquam porro quidem dolorum, quod, odit ut rem consequuntur distinctio omnis perspiciatis animi inventore enim quos ipsum, sed deleniti debitis error facilis vel amet quaerat. Dolor, impedit labore consequatur consectetur quibusdam, fugiat voluptatum placeat perspiciatis corporis, dicta nemo sit.</p>
+          <p><%= @boat.description %></p>
         </div>
       </div>
 
@@ -47,9 +47,27 @@
               </div>
             </div>
           </div>
-          <div class="button">
-            <button type="button" class="book_now btn btn-success">Book it now!</button>
+          <div class="owner_options">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+             <div class="delete_boat">
+                <%= link_to edit_boat_path(@boat) do %>
+                  <button class="option_button">Edit</button>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+              <div class="delete_boat">
+                <%= link_to boat_path(@boat), :method => "delete" do %>
+                  <button class="option_button">Delete boat</button>
+                <% end %>
+              </div>
+            </div>
           </div>
+
+
+          <!-- <div class="button">
+            <button type="button" class="book_now btn btn-success">Book it now!</button>
+          </div> -->
         </div>
 
 
@@ -59,9 +77,9 @@
   </div>
 </div>
 
-<div class="delete_boat">
+<!-- <div class="delete_boat">
   <%= link_to boat_path(@boat), :method => "delete" do %>
   <button type="button" class=" delete btn btn-primary">Delete boat</button>
   <% end %>
-</div>
+</div> -->
 
