@@ -1,2 +1,14 @@
-<h1>Bookings#edit</h1>
-<p>Find me in app/views/bookings/edit.html.erb</p>
+<div class="wrapper">
+<%= link_to my_trips_path do %>
+    <button type="button" class="back btn btn-warning">Back</button>
+  <% end %>
+
+
+  <div class="container">
+    <div class="row">
+      <span class="title">
+          <h3 id="vessel-name"><%= @boat.name %> </h3>
+        </span>
+        <p><%= @boat.name %> costs <%= @boat.price %>€ per day</p>
+        <%= render 'form', booking: @booking %>
+    </div>

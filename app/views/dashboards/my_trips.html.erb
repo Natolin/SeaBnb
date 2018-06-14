@@ -1,13 +1,27 @@
-<h1>All of My Boookings:</h1>
+<h1>All of My Bookings:</h1>
 
 <% @my_bookings.each do  |x| %>
 <div class="">
     <p>Boat Name: <%= x.boat.name %></p>
     <p>Start Date: <%= x.start_date %></p>
     <p>End Date: <%= x.end_date %></p>
-    <p>Total Price: <%= x.total_price %></p>
+    <p>Total Price: <%= (x.boat.price*(x.end_date - x.start_date)).to_i %></p>
+
+    <!-- <div class="edit_booking">
+      <%= link_to edit_boat_booking_path(x.boat.id, x.id) do %>
+        <button class="option_button">Edit</button>
+      <% end %>
+    </div> -->
+
+    <div class="edit_booking">
+      <%= link_to edit_boat_booking_path(x.boat, x) do %>
+        <button class="option_button">Edit</button>
+      <% end %>
+    </div>
+
     <br>
     <br>
+
   <% end %>
 </div>
 
