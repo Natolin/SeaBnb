@@ -5,7 +5,7 @@ class BoatPolicy < ApplicationPolicy
     end
   end
   def create?
-    return true
+    !user.nil?
   end
 
   def update?
