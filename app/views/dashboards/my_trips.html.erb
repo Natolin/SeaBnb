@@ -1,2 +1,13 @@
-<h1>Dashboards#my_trips</h1>
-<p>Find me in app/views/dashboards/my_trips.html.erb</p>
+<h1>All of My Boookings:</h1>
+
+<% @my_bookings.each do  |x| %>
+<div class="">
+    <p>Boat Name: <%= x.boat.name %></p>
+    <p>Start Date: <%= x.start_date %></p>
+    <p>End Date: <%= x.end_date %></p>
+    <p>Total Price: <%= x.total_price %></p>
+    <br>
+    <br>
+  <% end %>
+</div>
+
