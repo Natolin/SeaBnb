@@ -1,4 +1,5 @@
 class BoatsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   before_action :set_boat, only: [:edit, :update, :show, :destroy]
 
   def index
