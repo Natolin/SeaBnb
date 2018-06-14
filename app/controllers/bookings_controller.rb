@@ -12,7 +12,8 @@ class BookingsController < ApplicationController
     # authorize @booking
     @booking.user = current_user
     if @booking.save
-      redirect_to boat_path(@boat)
+      flash[:success] = "Your booking has been successfully created!"
+      redirect_to my_trips_path
     else
       render :new
     end
@@ -21,6 +22,7 @@ class BookingsController < ApplicationController
   def edit
     # authorize @booking
     @booking = Booking.find(params[:id])
+    @boat = Boat.find(params[:boat_id])
   end
 
   def update
@@ -29,7 +31,7 @@ class BookingsController < ApplicationController
     @booking.update(booking_params)
     # authorize @booking
     if @booking.save
-      redirect_to booking_requests_path
+      redirect_to my_trips_path
 
     else
       render :edit

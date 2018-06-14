@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
  resources :boats  do
-  resources :bookings, except: [:show, :update, :edit]
+  resources :bookings, except: [:show]
  end
 
  root to: 'pages#home'
