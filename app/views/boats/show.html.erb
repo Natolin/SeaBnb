@@ -8,9 +8,10 @@
 
   <div class="container">
     <div class="row">
-      <span class="title">
-          <h3 id="vessel-name"><%= @boat.name %> </h3>
-        </span>
+     <span class="home_title">
+      <h2 id="vessel-name"><%= @boat.name %> </h2>
+      <div class="sweet_line"></div>
+     </span>
     </div>
 
     <div class="row">
@@ -19,7 +20,7 @@
           <div class="show-img" style="background-image: url(<%= @boat.photo %>;"></div>
 
           <h3></h3>
-          <p><%= @boat.description %></p>rails
+          <p><%= @boat.description %></p>
         </div>
       </div>
 
@@ -50,23 +51,29 @@
           <div class="owner_options">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
              <div class="edit_boat">
-                <%= link_to edit_boat_path(@boat) do %>
-                  <button class="option_button">Edit</button>
-                <% end %>
+                  <% if policy(@boat).edit? %>
+                    <%= link_to edit_boat_path(@boat) do %>
+                      <button class="option_button">Edit</button>
+                    <% end %>
+                  <% end %>
               </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
               <div class="delete_boat">
-                <%= link_to boat_path(@boat), :method => "delete",
+                <% if policy(@boat).destroy? %>
+                  <%= link_to boat_path(@boat), :method => "delete",
             data: { confirm: "Are you sure you want to delete #{@boat.name}?"} do %>
                   <button class="option_button" >Delete boat</button>
+                  <% end %>
                 <% end %>
               </div>
             </div>
           </div>
           <div class="button">
-            <%= link_to new_boat_booking_path(@boat) do %>
-            <button type="button" class="book_now btn btn-success">Book it now!</button>
+            <% if @boat.user_id != current_user.id %>
+              <%= link_to new_boat_booking_path(@boat) do %>
+                <button type="button" class="book_now btn btn-success">Book it now!</button>
+            <% end %>
             <% end %>
           </div>
         </div>
@@ -76,13 +83,10 @@
     <div id="map" class="map-show" style="width: 48%; height: 200px;"data-markers="<%= @marker.to_json %>">
   </div>
 </div>
-
-
 </div>
 
-
-
 <div class="space-maker" style="height:50px"></div>
+
 
 
 
