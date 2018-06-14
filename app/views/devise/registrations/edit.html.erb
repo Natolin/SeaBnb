@@ -13,17 +13,17 @@
           </div>
 
 
-          <div class="form-inputs">
+          <div class="edit-form-inputs">
 
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <p>Currently awaiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
 
-            <%= f.input :user_name, label: 'User Name', placeholder: 'Enter your username', required: false, autofocus: true %>
-            <%= f.input :password, autocomplete: "off", placeholder: 'Enter your new password', required: false %>
-            <%= f.input :password_confirmation, required: false, placeholder: 'Retype the new password' %>
-            <%= f.input :current_password, placeholder: "Enter your current password", required: false %>
-            <div class="form-actions">
+            <%= f.input :user_name, label: 'User Name', placeholder: 'Enter your username', required: false, autofocus: true,input_html: { class: 'edit-form-inputs' } %>
+            <%= f.input :password, autocomplete: "off", placeholder: 'Enter your new password', required: false, input_html: { class: 'edit-form-inputs' } %>
+            <%= f.input :password_confirmation, required: false, placeholder: 'Retype the new password', input_html: { class: 'edit-form-inputs' } %>
+            <%= f.input :current_password, placeholder: "Enter your current password", required: false, input_html: { class: 'edit-form-inputs' } %>
+            <div class="edit-form-action">
               <%= f.button :submit, "Update", class: "update-profile" %>
             </div>
           </div>
