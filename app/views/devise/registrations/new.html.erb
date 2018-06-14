@@ -4,9 +4,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :user_name, required: true, autofocus: true %>
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :user_name, required: false, autofocus: true %>
+    <%= f.input :email, required: false, autofocus: true %>
+    <%= f.input :password, required: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
   </div>
 
@@ -15,4 +15,5 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<!-- This was no longer needed -->
+<!-- <div><%= render "devise/shared/links" %></div> -->
