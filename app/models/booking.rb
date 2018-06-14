@@ -6,3 +6,4 @@ class Booking < ApplicationRecord
   validates :end_date, presence: true
   # validates :total_price, presence: true
 end
+
