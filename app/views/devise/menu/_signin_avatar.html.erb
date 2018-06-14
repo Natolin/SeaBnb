@@ -7,9 +7,11 @@
   </div>
 
   <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-    <% if policy(Boat).create? %>
-      <li><%= link_to "Add Boat", new_boat_path %></li>
-    <% end %>
+    <li><%= link_to "Add Boat", new_boat_path %></li>
+    <li><%= render 'devise/menu/registration_items' %></li>
+    <li><%= render 'devise/menu/login_items' %></li>
+    <!-- <li><a href="#">Switch View</a></li> -->
+    <!-- <li><a href="#">Log Out</a></li> -->
   </ul>
 <% end %>
 
