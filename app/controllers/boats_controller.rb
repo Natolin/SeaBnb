@@ -1,8 +1,9 @@
 class BoatsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   before_action :set_boat, only: [:edit, :update, :show, :destroy]
 
   def index
-    # @boats = Boat.where.not(latitude: nil, longitude: nil)
+    @boats = policy_scope(Boat).order(created_at: :desc)
     @boats = Boat.all
     @markers = @boats.map do |boat|
       {
@@ -15,6 +16,8 @@ class BoatsController < ApplicationController
 
   def show
     # see before_action
+    authorize @boat
+    @boats = Boat.all
      @marker = [{
         lat: @boat.latitude,
         lng: @boat.longitude#,
@@ -23,11 +26,13 @@ class BoatsController < ApplicationController
 
   def new
     @boat = Boat.new
+    authorize @boat
   end
 
   def create
     @boat = Boat.new(boat_params)
     @boat.user = current_user
+    authorize @boat
     if @boat.save
       redirect_to boat_path(@boat)
     else
@@ -36,7 +41,9 @@ class BoatsController < ApplicationController
   end
 
   def edit
+
     # see before_action
+    authorize @boat
   end
 
   def update #do we need save method for update
@@ -46,11 +53,13 @@ class BoatsController < ApplicationController
     else
       render :edit
     end
+    authorize @boat
   end
 
   def destroy
     @boat.destroy
     redirect_to boats_path
+    authorize @boat
   end
 
 

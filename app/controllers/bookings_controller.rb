@@ -2,14 +2,12 @@ class BookingsController < ApplicationController
  def new
     @boat = Boat.find(params[:boat_id])
     @booking = Booking.new
-    # authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @boat = Boat.find(params[:boat_id])
     @booking.boat = @boat
-    # authorize @booking
     @booking.user = current_user
     if @booking.save
       flash[:success] = "Your booking has been successfully created!"
@@ -20,7 +18,6 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    # authorize @booking
     @booking = Booking.find(params[:id])
     @boat = Boat.find(params[:boat_id])
   end
@@ -29,10 +26,8 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     boat = Boat.find(params[:boat_id])
     @booking.update(booking_params)
-    # authorize @booking
     if @booking.save
       redirect_to my_trips_path
-
     else
       render :edit
     end
