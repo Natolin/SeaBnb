@@ -1,3 +1,5 @@
+
+
 <div class="form-group">
   <%= simple_form_for [@boat, @booking] do |f| %>
     <% if @booking.errors.any? %>
@@ -9,8 +11,11 @@
         </ul>
       </div>
     <% end %>
-    <%= f.date_field :start_date %>
-    <%= f.date_field :end_date %>
-    <%= f.button :submit, class: 'btn btn-primary' %>
+    <div class="booking-form">
+      <p>Start Date: <%= f.date_field :start_date %></p>
+      <p>End Date: <%= f.date_field :end_date %></p>
+      <br>
+      <%= f.button :submit, class: 'back btn btn-warning' %>
+    </div>
   <% end %>
 </div>
