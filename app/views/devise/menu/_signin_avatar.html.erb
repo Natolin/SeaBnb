@@ -7,7 +7,7 @@
   </div>
 
   <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-    <p><%= current_user.user_name %></p>
+    <p>Hello <%= current_user.user_name %></p>
     <li><%= link_to "Add Boat", new_boat_path %></li>
     <li><%= render 'devise/menu/registration_items' %></li>
     <li><%= render 'devise/menu/login_items' %></li>
