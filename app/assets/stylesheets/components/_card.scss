@@ -1,17 +1,40 @@
 
-.title {
+.main_container{
+  min-height: 80vh;
+}
+
+.home_title {
   margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.sweet_line{
+  border-bottom: 1px solid #D0A143;
+  width: 50%;
+  margin-bottom: 50px;
 }
 
 .card{
   height: 200px;
+  width: 100%;
   background-position: center;
   background-size: cover !important;
   border-radius: 5px 5px 0px 0px;
   position: relative;
 }
 
+
+.card_border{
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 4px #D3D3D3;
+  border-radius: 5px 5px 0px 0px;
+  text-position: center;
+}
 
 .boat_details{
   background-color: white;
@@ -42,20 +65,6 @@
   p{
     font-size: 12px;
   }
-}
-
-
-.card_border{
-  // width: 270px;
-  // max-width: 1000px;
-  margin: 10px;
-  margin-bottom: 20px;
-  padding: 0px;
-  box-shadow: 0px 0px 4px #D3D3D3;
-  border-radius: 5px 5px 0px 0px;
-  text-position: center;
-
-
 }
 
 .nav_wheel{
