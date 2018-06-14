@@ -7,11 +7,50 @@
   <div class="container">
     <div class="row">
       <span class="title">
-          <h3 id="vessel-name"><%= @boat.name %> </h3>
-        </span>
-        <p><%= @boat.name %> costs <%= @boat.price %>€ per day</p>
+        <h3 id="vessel-name"><%= @boat.name %> </h3>
+      </span>
+    </div>
+
+    <div class="review-photo">
+      <%= link_to boat_path(@boat) do %>
+        <%= image_tag "#{@boat.photo}"%>
+      <% end %>
+    </div>
+
+        <!-- <div class="review">
+          <div class="row">
+
+            <div class=" left col-xs-12 col-sm-6">
+              <p>Location: <%= @boat.location %></p>
+              <p>Type of Vessel: <%= @boat.boat_type %></p>
+            </div>
+
+            <div class="col-xs-12 col-sm-1">
+            </div>
+
+            <div class=" right col-xs-12 col-sm-6">
+              <p>Capacity: <%= @boat.capacity %> passengers</p>
+              <p>Price per day: <%= @boat.price %>€</p>
+            </div>
+
+
+          </div>
+
+
+          <p class="review-details">Description: <%= @boat.description %></p> -->
+
+ <!--        <div class="sweet_line"></div> -->
+          <br>
+          <h4 class="review-details">Enter details for new booking here:</h4>
+          <br>
+        </div>
+
         <%= render 'form', booking: @booking %>
     </div>
+  <div class="space-maker" style="height:50px"></div>
+  </div>
+
+</div>
 
 
 
