@@ -7,9 +7,10 @@
 
   <div class="main_container">
     <div class="row">
+      <div class="cards_no_map">
       <% @boats.each do |boat| %>
         <%= link_to boat_path(boat) do %>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div class="card_border">
                 <div class="card" style="background-image: url(<%= boat.photo %>;">
                   <div class="nav_wheel" style="background-image: url(<%= image_path("nav_wheel.png")%>;">
@@ -31,9 +32,9 @@
             </div>
         <% end %>
       <% end %>
-    </div>
-    <div class="row">
-      <div id="map" class="map-container" style="width: 95%; height: 400px;"data-markers="<%= @markers.to_json %>">
+      </div>
+        <div id="map" class="map-container" style="width: 95%; height: 400px;"data-markers="<%= @markers.to_json %>">
+        </div>
       </div>
     </div>
 </div>
