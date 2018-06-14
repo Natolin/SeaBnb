@@ -16,7 +16,10 @@
 
     <a href="/boats" class="navbar-wagon-item navbar-wagon-link">All Boats</a>
    <!--  <a href="/" class="navbar-wagon-item navbar-wagon-link">Sign up</a> -->
-   <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <!-- <div><%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %></div> -->
+
+   <%= render 'devise/menu/registration_items' %>
+   <%= render 'devise/menu/login_items' %>
 
 
     <!-- Profile picture with dropdown list -->
