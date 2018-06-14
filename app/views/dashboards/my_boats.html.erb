@@ -1,2 +1,15 @@
-<h1>Dashboards#my_boats</h1>
-<p>Find me in app/views/dashboards/my_boats.html.erb</p>
+<h1>All of My Boats:</h1>
+
+<% @my_boats.each do  |x| %>
+<div class="">
+    <p>Name: <%= x.name %></p>
+    <p>Description: <%= x.description %></p>
+    <p>Location: <%= x.location %></p>
+    <p>Capacity: <%= x.capacity %></p>
+    <p>Price per day: <%= x.price %></p>
+    <p>Boat Type: <%= x.boat_type %></p>
+    <br>
+    <br>
+  <% end %>
+</div>
+
