@@ -12,24 +12,26 @@
 
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <a href="/boats" class="navbar-wagon-item navbar-wagon-link">All Boats</a>
+  <div class="navbar-wagon-right">
 
    <!--  <a href="/" class="navbar-wagon-item navbar-wagon-link">Sign up</a> -->
     <!-- <div><%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %></div> -->
-    <% if user_signed_in? == false %>
-     <%= render 'devise/menu/registration_items' %>
-     <%= render 'devise/menu/login_items' %>
-    <% end %>
+
+    <div class="hidden-xs hidden-sm">
+      <a href="/boats" class="navbar-wagon-item navbar-wagon-link">All Boats</a>
+      <% if user_signed_in? == false %>
+       <%= render 'devise/menu/registration_items' %>
+       <%= render 'devise/menu/login_items' %>
+      <% end %>
+    </div>
 
 
     <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
+    <div class="navbar-wagon-item d-xs-block d-sm-block">
       <div class="dropdown">
         <%= render 'devise/menu/signin_avatar' %>
       </div>
     </div>
   </div>
 
-  </div>
+</div>
