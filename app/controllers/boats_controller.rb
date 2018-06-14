@@ -2,11 +2,23 @@ class BoatsController < ApplicationController
   before_action :set_boat, only: [:edit, :update, :show, :destroy]
 
   def index
+    # @boats = Boat.where.not(latitude: nil, longitude: nil)
     @boats = Boat.all
+    @markers = @boats.map do |boat|
+      {
+        lat: boat.latitude,
+        lng: boat.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def show
     # see before_action
+     @marker = [{
+        lat: @boat.latitude,
+        lng: @boat.longitude#,
+      }]
   end
 
   def new
