@@ -52,6 +52,7 @@
   width: 350px;
   margin-left: 10%;
   margin-bottom: 30px;
+  border-radius: 3px;
 }
 
 #boat_photo {
@@ -67,11 +68,10 @@
   background: #D0A143;
   color: white;
   padding: 8px 30px 8px 30px;
-  border-radius: 5px;
+  border-radius: 3px;
 
   &:hover {
     transition: all .5s ease;
-    transform: scale(1.1);
     background: white;
     color: #B8A7A7;
     border: 1px solid #D0A143;
