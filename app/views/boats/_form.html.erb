@@ -1,25 +1,36 @@
 <div class="container">
+
+  <div class="add-boat-header">
+    <h1>Add Your Vessel Details</h1>
+  </div>
+
   <div class="boat-form">
 
     <%= form_for @boat do |f| %>
 
-    <p>Name of Vessel: <%= f.text_field :name %></p>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-4">
+          <div class="add-boat-form-content">
+            <%= f.text_field :name, class: 'add-boat-text-field', placeholder: 'Name of vessel' %>
 
-    <p>Home Port: <%= f.text_field :location %></p> <!-- use google maps to confirm -->
-    <p>Choose type of vessel: <%= f.select :boat_type, ['Yacht', 'Sloop', 'Schooner', 'Frigate', 'Pirate Ship', 'Barque', 'Kayak', 'Canoe']%></p>
+            <%= f.text_field :location, class: 'add-boat-text-field', placeholder: 'Home port' %> <!-- use google maps to confirm -->
+            <p>Choose type of vessel: <%= f.select :boat_type, ['Yacht', 'Sloop', 'Schooner', 'Frigate', 'Pirate Ship', 'Barque', 'Kayak', 'Canoe']%></p>
 
-    <p>Choose vessel capacity: <%= f.select :capacity, ['2 people', '3 people', '4 people', '5 people', '6 people', '7 people', '8 people']%></p>
+            <p>Choose vessel capacity: <%= f.select :capacity, ['2 people', '3 people', '4 people', '5 people', '6 people', '7 people', '8 people']%></p>
 
-    <p>Price per day: <%= f.number_field :price %> euros</p>
+            <p>Price per day: <%= f.number_field :price %> euros</p>
 
-    <p>Add description of your cool ass vessel:</p>
-    <p> <%= f.text_area :description %></p>
+            <p>Add description of your cool ass vessel:</p>
+            <p> <%= f.text_area :description %></p>
 
-    <p>Upload a photo of your boat: <%= f.file_field :photo %></p>
+            <p>Upload a photo of your boat: <%= f.file_field :photo %></p>
 
-    <%= f.submit %>
+            <%= f.submit %>
+          </div>
+        </div>
+      </div>
     <% end %>
-
-
-    </div>
+  </div>
 </div>
+
+<div class="space-maker" style="height:50px"></div>
