@@ -20,7 +20,41 @@
 
   <div class="wrapper">
     <div class="featured-vessels">
-      <h3>Your Featured Vessels Here!</h3>
+      <!-- <h3>Your Featured Vessels Here!</h3> -->
+      <div class="row">
+        <div class="nothing"></div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+      <% @featured.each do |boat| %>
+        <%= link_to boat_path(boat) do %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="card_border">
+                <div class="featured card" style="background-image: url(<%= boat.photo %>;">
+                  <div class="nav_wheel" style="background-image: url(<%= image_path("nav_wheel.png")%>;">
+                  </div>
+                    <div class="name">
+                      <h3><%= boat.name %></h3>
+                    </div>
+                </div>
+                <div class="boat_details">
+                  <div class="main">
+                    <p><%= boat.boat_type %></p>
+                    <p><%= boat.price %>€ per day</p>
+                  </div>
+                  <div class="capacity">
+                    <p>Capacity:  <%= boat.capacity %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+      <% end %>
+    <!-- </div> -->
+  </div> <!-- end of card -->
+
+
     </div>
   </div>
 
