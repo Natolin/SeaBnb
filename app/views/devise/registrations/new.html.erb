@@ -1,19 +1,28 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="sign-in-form-body">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :user_name, required: false, autofocus: true %>
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+            <div class="sign-in-title">
+              <h2>Sign up</h2>
+            </div>
+
+          <div class="form-inputs">
+            <%= f.input :user_name, required: false, autofocus: true %>
+            <%= f.input :email, required: false, autofocus: true %>
+            <%= f.input :password, required: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+            <%= f.input :password_confirmation, required: true %>
+          </div>
+
+          <div class="sign-in-form-actions">
+            <%= f.button :submit, "Sign up", class: "sign-in-profile" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<!-- This was no longer needed -->
-<!-- <div><%= render "devise/shared/links" %></div> -->

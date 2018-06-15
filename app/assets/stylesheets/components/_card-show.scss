@@ -127,15 +127,21 @@
   align-items: center;
   padding-bottom: 10px;
   border: 1px solid #D0A143;
-  :hover{
-    background: #D0A143;
-    color: white;
+
+  &:hover{
+    transition: all .5s ease;
     border: 1px solid #D0A143;
+    background: white;
+    color: #B8A7A7;
   }
 }
 
 .button {
   text-position: center;
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .back {
