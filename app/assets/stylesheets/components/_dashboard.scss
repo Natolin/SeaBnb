@@ -10,10 +10,28 @@
 }
 
 .dash-bookings-content {
-
+  padding-top: 20px;
+  color: #B8A7A7;
 }
+
 
 .magical-line {
   border-bottom: 2px solid #D0A143;
-  padding: 30px;
+}
+
+.thin-magic-line {
+  border-bottom: 1px solid #B8A7A7;
+}
+
+.dash-option-button {
+  background: #D0A143;
+  color: white;
+  border-radius: 3px;
+  &:hover {
+    text-decoration: none;
+    transition: all .5s ease;
+    color: #B8A7A7;
+    background: white;
+    border: 1px solid #D0A143;
+  }
 }
