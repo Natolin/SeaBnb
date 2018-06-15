@@ -1,0 +1,79 @@
+// * Note * The Id related CSS styles can't be found in the views HTML files.
+// Inspect the webpage in the browser to find HTML Ids
+
+.add-boat-header {
+  text-align: center;
+  border-bottom: 1px solid #D0A143;
+  color: #B8A7A7;
+  margin-bottom: 40px;
+  padding: 15px;
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+.add-boat-form-content {
+  p {
+    margin-left: 10%;
+  }
+}
+
+.add-boat-text-field {
+  border-radius: 2px;
+  box-shadow: none;
+  width: 320px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+#boat_name, #boat_location {
+  width: 80%;
+  margin-left: 10%
+}
+
+
+#boat_boat_type, #boat_capacity {
+  width: 150px;
+  height: 30px;
+  margin-left: 10%;
+  margin-bottom: 30px;
+}
+
+#boat_price {
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+  margin-left: 10%;
+  margin-bottom: 30px;
+}
+
+#boat_description {
+  width: 350px;
+  margin-left: 10%;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+#boat_photo {
+  margin-left: 10%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.add-boat-submit {
+  transition: all .5s ease;
+  margin-top: 30px;
+  margin-left: 40%;
+  background: #D0A143;
+  color: white;
+  padding: 8px 30px 8px 30px;
+  border-radius: 3px;
+
+  &:hover {
+    transition: all .5s ease;
+    background: white;
+    color: #B8A7A7;
+    border: 1px solid #D0A143;
+  }
+}
