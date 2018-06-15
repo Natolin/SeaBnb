@@ -1,7 +1,13 @@
 .search-button {
   background: #CC9933;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
+  &:hover {
+    transition: all .5s ease;
+    background: white;
+    color: #B8A7A7;
+    border: 1px solid #D0A143;
+  }
 }
 
 
