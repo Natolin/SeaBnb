@@ -1,59 +1,72 @@
-<h1>Welcome to Your Dashboard</h1>
+<div class="container">
+
+  <div class="dash-bookings-title">
+    <h1>Your Dashboard</h1>
+  </div>
+
+  <h1>All of My Bookings:</h1>
+
+  <% if @my_bookings.count > 0 %>
+    <% @my_bookings.each do  |x| %>
+
+      <div class="row">
+        <div class="dash-bookings-content">
+
+          <div class="dash-bookings-info--left col-md-4">
+            <p>Boat Name: <%= x.boat.name %></p>
+            <p>Total Price: <%= (x.boat.price*(x.end_date - x.start_date)).to_i %></p>
+          </div>
+
+          <div class="dash-bookings-info--center col-md-3">
+            <p>Start Date: <%= x.start_date %></p>
+            <p>End Date: <%= x.end_date %></p>
+          </div>
+
+          <div class="dash-bookings-info--right col-md-3">
+            <p>Owner: <%= x.boat.user.user_name %></p>
+            <p>Renter: <%= x.user.user_name %></p>
+          </div>
 
 
- <!--  if booking count > 0 -->
+          <div class="edit_booking col-md-2">
+            <%= link_to boat_path(x.boat) do %>
+              <button class="option_button">View</button>
+            <% end %>
 
-<h1>All of My Bookings:</h1>
+            <%= link_to edit_boat_booking_path(x.boat, x) do %>
+              <button class="option_button">Edit</button>
+            <% end %>
+          </div>
 
-<% @my_bookings.each do  |x| %>
-<div class="">
-    <p>Boat Name: <%= x.boat.name %></p>
-    <p>Start Date: <%= x.start_date %></p>
-    <p>End Date: <%= x.end_date %></p>
-    <p>Total Price: <%= (x.boat.price*(x.end_date - x.start_date)).to_i %></p>
+        <% end %>
+        </div>
+      </div>
 
-    <div class="edit_booking">
-        <%= link_to edit_boat_booking_path(x.boat, x) do %>
-          <button class="option_button">Edit</button>
-      <% end %>
-    </div>
-
-    <br>
-    <br>
-
+  <% else %>
+    <h2>You don't have any bookings to display.</h2>
   <% end %>
+
+  <div class="magical-line" style="border-bottom: 4px solid #D0A143"></div>
+
+  <% if @my_boats.count > 0 %>
+    <h1>All of My Boats:</h1>
+
+  <% @my_boats.each do  |x| %>
+  <div class="">
+      <p>Name: <%= link_to x.name, boat_path(x) %></p>
+
+      <p>Description: <%= x.description %></p>
+      <p>Location: <%= x.location %></p>
+      <p>Capacity: <%= x.capacity %></p>
+      <p>Price per day: <%= x.price %></p>
+      <p>Boat Type: <%= x.boat_type %></p>
+      <br>
+      <br>
+    <% end %>
+  </div>
+ <% end %>
 </div>
 
-<!--
-else sorry message -->
-
-
-
-
-
-
-
-
-
-<!-- if is_owner == true -->
-
-<h1>All of My Boats:</h1>
-
-<% @my_boats.each do  |x| %>
-<div class="">
-    <p>Name: <%= x.name %></p>
-    <p class="display-photo"><%= link_to boat_path(x) do %>
-          <%= image_tag "#{x.photo}"%>
-      <% end %></p>
-    <p>Description: <%= x.description %></p>
-    <p>Location: <%= x.location %></p>
-    <p>Capacity: <%= x.capacity %></p>
-    <p>Price per day: <%= x.price %></p>
-    <p>Boat Type: <%= x.boat_type %></p>
-    <br>
-    <br>
-  <% end %>
-</div>
 
 
 
