@@ -19,9 +19,12 @@
 
     <div class="hidden-xs hidden-sm">
       <a href="/boats" class="navbar-wagon-item navbar-wagon-link">All Boats</a>
+
       <% if user_signed_in? == false %>
        <%= render 'devise/menu/registration_items' %>
        <%= render 'devise/menu/login_items' %>
+       <% else %>
+       <a href="/dashboard" class="navbar-wagon-item navbar-wagon-link">Dashboard</a>
       <% end %>
     </div>
 
