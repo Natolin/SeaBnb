@@ -4,9 +4,8 @@
     <h1>Your Dashboard</h1>
   </div>
 
-  <h1>All of My Bookings:</h1>
-
   <% if @my_bookings.count > 0 %>
+    <h3>All of My Bookings:</h3>
     <% @my_bookings.each do  |x| %>
 
       <div class="row">
@@ -30,42 +29,83 @@
 
           <div class="edit_booking col-md-2">
             <%= link_to boat_path(x.boat) do %>
-              <button class="option_button">View</button>
+              <button class="dash-option-button">View</button>
             <% end %>
 
             <%= link_to edit_boat_booking_path(x.boat, x) do %>
-              <button class="option_button">Edit</button>
+              <button class="dash-option-button">Edit</button>
             <% end %>
           </div>
-
-        <% end %>
         </div>
       </div>
 
+      <% if @my_bookings.count > 1 %>
+        <div class="thin-magic-line"></div>
+      <% end %>
+
+    <% end %>
+
   <% else %>
-    <h2>You don't have any bookings to display.</h2>
+
+    <div class="message-if-nothing">
+      <h3>You don't have any bookings to display.</h3>
+      <%= link_to boats_path do %>
+        <button class="dash-option-button">Book a boat</button>
+      <% end %>
+    </div>
+    <br>
+
   <% end %>
 
-  <div class="magical-line" style="border-bottom: 4px solid #D0A143"></div>
+  <div class="magical-line"></div>
 
   <% if @my_boats.count > 0 %>
-    <h1>All of My Boats:</h1>
+
+    <h3>All of My Boats:</h3>
 
   <% @my_boats.each do  |x| %>
-  <div class="">
-      <p>Name: <%= link_to x.name, boat_path(x) %></p>
+    <div class="row">
+      <div class="dash-bookings-content">
 
-      <p>Description: <%= x.description %></p>
-      <p>Location: <%= x.location %></p>
-      <p>Capacity: <%= x.capacity %></p>
-      <p>Price per day: <%= x.price %></p>
-      <p>Boat Type: <%= x.boat_type %></p>
-      <br>
-      <br>
-    <% end %>
-  </div>
+        <div class="dash-bookings-info--left col-md-4">
+          <p>Boat Name: <%= x.name %></p>
+        </div>
+
+        <div class="dash-bookings-info--center col-md-6">
+          <p>Location: <%= x.location %></p>
+        </div>
+
+        <div class="edit_booking col-md-2">
+          <%= link_to boat_path(x) do %>
+            <button class="dash-option-button">View</button>
+          <% end %>
+
+          <%= link_to edit_boat_path(x) do %>
+            <button class="dash-option-button">Edit</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+
+  <% else %>
+
+    <div class="message-if-nothing">
+      <h3>You don't have any boats to display.</h3>
+      <%= link_to new_boat_path do %>
+        <button class="dash-option-button">Host a boat</button>
+      <% end %>
+    </div>
+    <br>
+
+
  <% end %>
 </div>
+
+<br>
+
 
 
 
