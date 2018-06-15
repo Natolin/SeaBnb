@@ -13,17 +13,20 @@
       <div class="sweet_line"></div>
      </span>
     </div>
-
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="card-show">
           <div class="show-img" style="background-image: url(<%= @boat.photo %>;"></div>
-
-          <h3></h3>
+          <h3>Description</h3>
           <p><%= @boat.description %></p>
         </div>
       </div>
-
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <div class="map_border">
+          <div id="map" class="map-show" style="width: 100%; height: 350px;"data-markers="<%= @marker.to_json %>">
+          </div>
+        </div>
+      </div>
       <div class="col-xs-12 col-md-6">
         <div class="details">
           <div class="show-info">
@@ -78,9 +81,6 @@
           </div>
         </div>
     </div>
-  </div>
-  <div class="row">
-    <div id="map" class="map-show" style="width: 48%; height: 200px;"data-markers="<%= @marker.to_json %>">
   </div>
 </div>
 </div>
