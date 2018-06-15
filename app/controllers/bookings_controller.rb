@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       flash[:success] = "Your booking has been successfully created!"
-      redirect_to my_trips_path
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
     boat = Boat.find(params[:boat_id])
     @booking.update(booking_params)
     if @booking.save
-      redirect_to my_trips_path
+      redirect_to dashboard_path
     else
       render :edit
     end
