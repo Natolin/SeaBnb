@@ -33,7 +33,14 @@
         <% end %>
       <% end %>
       </div>
+      <% if @boats.empty? %>
+        <div class="no_boat_image">
+          <%= image_tag("sorry.gif") %>
+          <h1>No boats in <%= params[:query] %></h1>
+        </div>
+        <% else %>
         <div id="map" class="map-container" style="width: 95%; height: 400px;"data-markers="<%= @markers.to_json %>">
+        <% end %>
         </div>
       </div>
     </div>
