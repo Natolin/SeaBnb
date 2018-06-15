@@ -3,6 +3,9 @@
 <% @my_boats.each do  |x| %>
 <div class="">
     <p>Name: <%= x.name %></p>
+    <p class="display-photo"><%= link_to boat_path(x) do %>
+          <%= image_tag "#{x.photo}"%>
+      <% end %></p>
     <p>Description: <%= x.description %></p>
     <p>Location: <%= x.location %></p>
     <p>Capacity: <%= x.capacity %></p>
