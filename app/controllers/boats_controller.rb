@@ -3,8 +3,15 @@ class BoatsController < ApplicationController
   before_action :set_boat, only: [:edit, :update, :show, :destroy]
 
   def index
-    @boats = policy_scope(Boat).order(created_at: :desc)
-    @boats = Boat.all
+
+
+    if params[:query]
+      @boats = Boat.search_by_location(params[:query])
+    else
+      @boats = Boat.all
+    end
+    # @boats = policy_scope(Boat).order(created_at: :desc)
+
     @markers = @boats.map do |boat|
       {
         lat: boat.latitude,

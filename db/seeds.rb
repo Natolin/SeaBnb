@@ -24,6 +24,23 @@ User.create(user_name: 'Piotr', password: 'password', password_confirmation: 'pa
 
 # Boat.create(name: 'Super Syd', location: 'paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
 
-Boat.create(name: 'Jess', location: '16 Villa Gaudelet, Paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+Boat.create(name: 'Luca', location: 'Carrer del Consell de Cent, 1, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
 
-Boat.create(name: 'Super Jess', location: 'Marienplatz 2, Munich', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+Boat.create(name: 'Sydney', location: 'Las Ramblas, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Jessie', location: 'Plaza Cataluña, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Chris', location: 'Port Olímpic, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Piotr', location: 'Villarroel - Gran Via, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Sven', location: 'Carrer de Casanova, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Fran', location: '16 Villa Gaudelet, Paris', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Niklas', location: 'Passeig de Sant Joan, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Benjamin', location: 'Passeig de Gràcia, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+
+Boat.create(name: 'Willy', location: 'Montjuïc, Barcelone, Espagne', capacity: 2, price: 500, boat_type: 'motor', user_id: 2)
+

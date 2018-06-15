@@ -24,6 +24,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem "geocoder"
 gem "pundit"
+gem "pg_search"
 
 
 group :development do
