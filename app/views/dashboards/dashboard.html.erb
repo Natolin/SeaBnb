@@ -1,0 +1,65 @@
+<h1>Welcome to Your Dashboard</h1>
+
+
+ <!--  if booking count > 0 -->
+
+<h1>All of My Bookings:</h1>
+
+<% @my_bookings.each do  |x| %>
+<div class="">
+    <p>Boat Name: <%= x.boat.name %></p>
+    <p>Start Date: <%= x.start_date %></p>
+    <p>End Date: <%= x.end_date %></p>
+    <p>Total Price: <%= (x.boat.price*(x.end_date - x.start_date)).to_i %></p>
+
+    <div class="edit_booking">
+        <%= link_to edit_boat_booking_path(x.boat, x) do %>
+          <button class="option_button">Edit</button>
+      <% end %>
+    </div>
+
+    <br>
+    <br>
+
+  <% end %>
+</div>
+
+<!--
+else sorry message -->
+
+
+
+
+
+
+
+
+
+<!-- if is_owner == true -->
+
+<h1>All of My Boats:</h1>
+
+<% @my_boats.each do  |x| %>
+<div class="">
+    <p>Name: <%= x.name %></p>
+    <p class="display-photo"><%= link_to boat_path(x) do %>
+          <%= image_tag "#{x.photo}"%>
+      <% end %></p>
+    <p>Description: <%= x.description %></p>
+    <p>Location: <%= x.location %></p>
+    <p>Capacity: <%= x.capacity %></p>
+    <p>Price per day: <%= x.price %></p>
+    <p>Boat Type: <%= x.boat_type %></p>
+    <br>
+    <br>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
