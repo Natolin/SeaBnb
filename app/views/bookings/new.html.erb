@@ -3,19 +3,19 @@
     <button type="button" class="back btn btn-warning">Back</button>
   <% end %>
 
-
   <div class="container">
     <div class="row">
-      <span class="title">
-        <h3 id="vessel-name"><%= @boat.name %> </h3>
-      </span>
+     <span class="home_title">
+      <h2 id="vessel-name"><%= @boat.name %> </h2>
+      <div class="sweet_line"></div>
+     </span>
     </div>
 
+
     <div class="review-photo">
-      <%= link_to boat_path(@boat) do %>
         <%= image_tag "#{@boat.photo}"%>
-      <% end %>
     </div>
+  </div>
 
         <!-- <div class="review">
           <div class="row">
@@ -40,17 +40,14 @@
           <p class="review-details">Description: <%= @boat.description %></p> -->
 
  <!--        <div class="sweet_line"></div> -->
-          <br>
-          <h4 class="review-details">Enter details for new booking here:</h4>
-          <br>
+        <div class="review-detials">
+            <h4 class="review-details">Enter details for new booking here:</h4>
         </div>
 
         <%= render 'form', booking: @booking %>
     </div>
   <div class="space-maker" style="height:50px"></div>
   </div>
-
-</div>
 
 
 

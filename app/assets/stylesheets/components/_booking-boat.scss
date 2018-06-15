@@ -1,5 +1,9 @@
 .review-photo {
   text-align: center;
+  img {
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
 }
 
 .left {
@@ -12,5 +16,4 @@
 
 .review-details {
   text-align: center;
-
 }
