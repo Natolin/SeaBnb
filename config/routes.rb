@@ -7,9 +7,8 @@ Rails.application.routes.draw do
 
  root to: 'pages#home'
 
-  get "my-trips", to: 'dashboards#my_trips'
-  get "my-boats", to: 'dashboards#my_boats'
-
+  get "dashboard", to: 'dashboards#dashboard'
+  # get "my-boats", to: 'dashboards#my_boats'
 
 
   devise_for :users

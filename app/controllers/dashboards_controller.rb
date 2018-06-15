@@ -1,9 +1,7 @@
 class DashboardsController < ApplicationController
-  def my_trips
+  def dashboard
     @my_bookings = current_user.bookings
-  end
-
-  def my_boats
     @my_boats = current_user.boats
+    # redirect_to dashboard_path(@my_bookings, @my_boats)
   end
 end
