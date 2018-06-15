@@ -4,8 +4,6 @@
   // color: #B0B0B0
 }
 
-
-
 #vessel-name {
   font-size: 40px;
   text-position: center;
@@ -19,11 +17,10 @@
   background: white;
   border-radius: 5px 5px 0px 0px;
 
-
-  .show-img {
+.show-img {
     width: 100%;
     height: 350px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 5px;
     background-position: center;
     background-size: cover !important;
   }
@@ -36,9 +33,10 @@
   }
 
   h3 {
-    padding: 20px;
+    padding-bottom: 30px;
     margin-bottom: 0px;
     border-bottom: 1px solid #D0A143;
+    text-align: center;
 
   }
 }
