@@ -1,24 +1,37 @@
 <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="edit-profile-form">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+          <div class="edit-profile-title">
+            <h2>Edit your info</h2>
+          </div>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+
+          <div class="edit-form-inputs">
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently awaiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+
+            <%= f.input :user_name, label: 'User Name', placeholder: 'Enter your username', required: false, autofocus: true,input_html: { class: 'edit-form-inputs' } %>
+            <%= f.input :password, autocomplete: "off", placeholder: 'Enter your new password', required: false, input_html: { class: 'edit-form-inputs' } %>
+            <%= f.input :password_confirmation, required: false, placeholder: 'Retype the new password', input_html: { class: 'edit-form-inputs' } %>
+            <%= f.input :current_password, placeholder: "Enter your current password", required: false, input_html: { class: 'edit-form-inputs' } %>
+            <div class="edit-form-action">
+              <%= f.button :submit, "Update", class: "update-profile" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+</div>
 
 <!-- This isn't important for us right now! -->
 <!-- <div>

@@ -1,0 +1,35 @@
+.edit-profile-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-profile-title {
+  width: 320px;
+  text-align: center;
+  color: #B8A7A7;
+  border-bottom: 1px solid #D0A143;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+
+.edit-form-inputs {
+  margin: 20px 0px 20px 0px;
+  width: 320px;
+}
+
+.edit-form-action {
+  margin: 60px 0px 60px 0px;
+  text-align: center;
+}
+
+.update-profile {
+  background: #D0A143;
+  color: white;
+
+  &:hover {
+    color: #B8A7A7;
+    background: white;
+    border: 1px solid #D0A143;
+  }
+}
