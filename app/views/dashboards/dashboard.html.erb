@@ -4,9 +4,8 @@
     <h1>Your Dashboard</h1>
   </div>
 
-  <h3>All of My Bookings:</h3>
-
   <% if @my_bookings.count > 0 %>
+    <h3>All of My Bookings:</h3>
     <% @my_bookings.each do  |x| %>
 
       <div class="row">
@@ -40,17 +39,22 @@
         </div>
       </div>
 
-      <div class="thin-magic-line"></div>
+      <% if @my_bookings.count > 1 %>
+        <div class="thin-magic-line"></div>
+      <% end %>
 
     <% end %>
 
   <% else %>
 
-    <h2>You don't have any bookings to display.</h2>
+    <div class="message-if-nothing">
+      <h3>You don't have any bookings to display.</h3>
+      <%= link_to boats_path do %>
+        <button class="dash-option-button">Book a boat</button>
+      <% end %>
+    </div>
+    <br>
 
-    <%= link_to boats_path do %>
-      <button class="dash-option-button">Book a boat</button>
-    <% end %>
   <% end %>
 
   <div class="magical-line"></div>
@@ -80,22 +84,22 @@
             <button class="dash-option-button">Edit</button>
           <% end %>
         </div>
-
-      <% end %>
       </div>
     </div>
 
-    <% if @my_boats.count > 1 %>
-      <div class="thin-magic-line"></div>
-    <% end %>
+  <% end %>
+
 
   <% else %>
 
-    <h2>You have no boats.</h2>
+    <div class="message-if-nothing">
+      <h3>You don't have any boats to display.</h3>
+      <%= link_to new_boat_path do %>
+        <button class="dash-option-button">Host a boat</button>
+      <% end %>
+    </div>
+    <br>
 
-    <%= link_to new_boat_path do %>
-      <button class="dash-option-button">Host a boat</button>
-    <% end %>
 
  <% end %>
 </div>
